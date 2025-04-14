@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var temperatureResult: UITextField!
+    @IBOutlet weak var SliderTemperature: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func SliderChanged(_ sender: Any) {
+        temperatureResult.text = "\(SliderTemperature.value)°C"
+    }
+    
 }
 
